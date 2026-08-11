@@ -6,8 +6,8 @@ Proyecto individual para el módulo M2 desarrollado con **React**, **Redux** y *
 
 ## 🔗 Enlaces
 
-* **Aplicación desplegada (Vercel):** [https://tu-app.vercel.app](https://tu-app.vercel.app)
-* **Repositorio en GitHub:** [https://github.com/tu-usuario/recipe-app](https://github.com/tu-usuario/recipe-app)
+* **Aplicación desplegada (Vercel):** [https://vercel.com/david-code/prueba-t-cnica-1](https://vercel.com/david-code/prueba-t-cnica-1)
+* **Repositorio en GitHub:** [https://github.com/DSamuelHernadnez/Prueba-T-cnica-1-](https://github.com/DSamuelHernadnez/Prueba-T-cnica-1-)
 
 ---
 

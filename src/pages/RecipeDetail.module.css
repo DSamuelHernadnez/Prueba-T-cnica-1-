@@ -1,0 +1,47 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.backBtn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #2e86de;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.detailCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.message, .error {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+.error { color: #ff6b6b; }
