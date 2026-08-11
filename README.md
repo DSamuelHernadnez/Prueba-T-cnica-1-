@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# 🍳 Proyecto Final: Aplicación de Recetas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto individual para el módulo M2 desarrollado con **React**, **Redux** y **CSS Modules**, consumiendo la API pública de [DummyJSON Recipes](https://dummyjson.com/docs/recipes).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔗 Enlaces
 
-### `npm start`
+* **Aplicación desplegada (Vercel):** [https://tu-app.vercel.app](https://tu-app.vercel.app)
+* **Repositorio en GitHub:** [https://github.com/tu-usuario/recipe-app](https://github.com/tu-usuario/recipe-app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologías que utilicé
 
-### `npm test`
+* **React**: Para crear los componentes de la interfaz.
+* **Redux y React-Redux**: Para manejar el estado global de la aplicación.
+* **Redux Thunk**: Para hacer las peticiones `fetch` asíncronas a la API.
+* **React Router DOM**: Para navegar entre las diferentes páginas sin recargar la pantalla.
+* **CSS Modules**: Para darle estilos a cada componente por separado sin que se mezclen.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🏗️ Estructura del Proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Organicé las carpetas de la siguiente manera:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+src/
+├── app/
+│   └── store.js              # Configuración del store de Redux
+├── features/
+│   └── recipes/
+│       ├── recipeActions.js  # Acciones y peticiones a la API (fetch)
+│       └── recipeReducer.js  # Reducer para modificar el estado
+├── components/
+│   ├── Navbar.jsx            # Barra de navegación
+│   └── RecipeCard.jsx        # Tarjeta para mostrar cada receta
+├── pages/
+│   ├── Home.jsx              # Vista principal con el listado y buscador
+│   ├── RecipeDetail.jsx      # Vista de detalle de una receta
+│   └── CreateRecipe.jsx      # Formulario para agregar receta
+├── App.jsx                   # Configuración de las rutas
+└── main.jsx                  # Punto de entrada de la app
