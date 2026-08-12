@@ -57,6 +57,26 @@ export const fetchRecipeById = (id) => async (dispatch) => {
 };
 
 // Crear receta (POST simulado)
+// export const addRecipe = (newRecipe) => async (dispatch) => {
+//   try {
+//     const res = await fetch(`${BASE_URL}/add`, {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify(newRecipe),
+//     });
+//     const data = await res.json();
+    
+//     // Asignamos un ID temporal único para evitar colisiones
+//     const recipeToAdd = { ...data, id: Date.now() };
+    
+//     dispatch({ type: ADD_RECIPE_SUCCESS, payload: recipeToAdd });
+//     return true;
+//   } catch (error) {
+//     dispatch({ type: SET_ERROR, payload: error.message });
+//     return false;
+//   }
+// };
+
 export const addRecipe = (newRecipe) => async (dispatch) => {
   try {
     const res = await fetch(`${BASE_URL}/add`, {
@@ -66,14 +86,14 @@ export const addRecipe = (newRecipe) => async (dispatch) => {
     });
     const data = await res.json();
     
-    // Asignamos un ID temporal único para evitar colisiones
+    // Generamos un ID único local
     const recipeToAdd = { ...data, id: Date.now() };
     
     dispatch({ type: ADD_RECIPE_SUCCESS, payload: recipeToAdd });
-    return true;
+    return recipeToAdd; // Retorna la receta completa para redireccionar usando su ID
   } catch (error) {
     dispatch({ type: SET_ERROR, payload: error.message });
-    return false;
+    return null;
   }
 };
 
