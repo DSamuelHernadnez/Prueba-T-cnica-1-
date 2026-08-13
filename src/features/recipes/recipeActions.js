@@ -56,27 +56,7 @@ export const fetchRecipeById = (id) => async (dispatch) => {
   }
 };
 
-// Crear receta (POST simulado)
-// export const addRecipe = (newRecipe) => async (dispatch) => {
-//   try {
-//     const res = await fetch(`${BASE_URL}/add`, {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify(newRecipe),
-//     });
-//     const data = await res.json();
-    
-//     // Asignamos un ID temporal único para evitar colisiones
-//     const recipeToAdd = { ...data, id: Date.now() };
-    
-//     dispatch({ type: ADD_RECIPE_SUCCESS, payload: recipeToAdd });
-//     return true;
-//   } catch (error) {
-//     dispatch({ type: SET_ERROR, payload: error.message });
-//     return false;
-//   }
-// };
-
+// Crear receta (Retorna el objeto creado con su ID)
 export const addRecipe = (newRecipe) => async (dispatch) => {
   try {
     const res = await fetch(`${BASE_URL}/add`, {
