@@ -30,7 +30,7 @@ export const CreateRecipe = () => {
     });
   };
 
-  // Función de validación (se ejecuta únicamente al hacer submit)
+  // Función de validación 
   const validateForm = () => {
     const newErrors = {};
 

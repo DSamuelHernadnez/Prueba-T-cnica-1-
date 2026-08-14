@@ -56,7 +56,7 @@ export const fetchRecipeById = (id) => async (dispatch) => {
   }
 };
 
-// Crear receta (Retorna el objeto creado con su ID)
+// Crear receta 
 export const addRecipe = (newRecipe) => async (dispatch) => {
   try {
     const res = await fetch(`${BASE_URL}/add`, {
